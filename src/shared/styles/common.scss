@@ -1,0 +1,28 @@
+@import "base";
+@import "reset";
+
+.container {
+  margin: 0px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  @include desktop {
+    max-width: 1280px;
+    padding: 0px 40px;
+  }
+}
+.visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.homePage {
+  background-image: url(../images/mainBG.jpg);
+  background-position: 50% 0%;
+}

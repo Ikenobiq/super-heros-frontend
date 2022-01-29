@@ -1,0 +1,43 @@
+@import "../../../shared/styles/common.scss";
+.heroBack {
+  width: 100%;
+  padding: 100px 0px;
+}
+.paragraph {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 750px;
+  text-transform: uppercase;
+  color: getColor("text-accent-secondary");
+  background: linear-gradient(
+    360deg,
+    getColor("text-primary") -135%,
+    getColor("text-accent") 135%,
+    getColor("text-secondary") 200%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+}
+.title {
+  font-size: 64px;
+  line-height: 77px;
+  width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background: linear-gradient(
+    360deg,
+    getColor("text-primary") -135%,
+    getColor("text-accent") 135%,
+    getColor("text-secondary") 200%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0b2349;
+  margin-bottom: 20px;
+}

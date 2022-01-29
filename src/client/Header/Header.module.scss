@@ -1,0 +1,42 @@
+@import "../../shared/styles/common.scss";
+.header {
+  &Wrap {
+    display: flex;
+    align-items: center;
+  }
+  &DivLogo {
+    margin-right: 80px;
+    &Img {
+      width: 150px;
+      padding: 15px 0px;
+      &:hover,
+      :focus {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &HomeLink,
+  &AddHeroLink {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(
+      180deg,
+      getColor("text-primary") 45%,
+      getColor("text-accent") 5%,
+      getColor("text-secondary") 55%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0b2349;
+    &:hover,
+    :focus {
+      text-shadow: getColor("text-secondary") 1px 0 10px;
+    }
+  }
+  &HomeLink {
+    margin-right: 20px;
+  }
+}

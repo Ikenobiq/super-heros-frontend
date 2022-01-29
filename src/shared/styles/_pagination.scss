@@ -1,0 +1,81 @@
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  @include desktop {
+    width: 838px;
+    justify-content: center;
+  }
+
+  .pagination-item {
+    height: 21px;
+    width: 21px;
+    margin: auto 8px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.01071em;
+    border-radius: 16px;
+    min-width: 21px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #adadad;
+
+    &.dots:hover {
+      background-color: transparent;
+      cursor: default;
+      color: #000046;
+    }
+    &:hover {
+      background-color: #000046;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    &.selected {
+      background-color: #000046;
+      color: #ffffff;
+    }
+
+    .arrow {
+      &::before {
+        position: relative;
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+      }
+
+      &.left {
+        background-image: url(../../shared/images/arrLeft.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &.right {
+        background-image: url(../../shared/images/arrLeft.svg);
+        transform: rotate(180deg);
+        background-repeat: no-repeat;
+        background-position: center;
+        fill: greenyellow;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      .arrow::before {
+        background-color: transparent;
+        cursor: default;
+      }
+
+      &:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+    }
+  }
+}

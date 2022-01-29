@@ -1,0 +1,36 @@
+.slick- {
+  &track {
+    display: flex;
+  }
+  &list {
+    overflow: hidden;
+  }
+  &dots {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &dots li {
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    border-color: getColor("text-accent");
+    background-color: getColor("text-secondary");
+  }
+  &dots button {
+    cursor: pointer;
+    padding: 0px;
+    font-size: 0;
+    width: 11px;
+    height: 11px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: inherit;
+    background-color: inherit;
+  }
+  &dots li.slick-active {
+    background-color: getColor("text-accent");
+  }
+}

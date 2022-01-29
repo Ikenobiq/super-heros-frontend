@@ -1,0 +1,49 @@
+@import "../../shared/styles/common.scss";
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.searchDiv {
+  position: relative;
+}
+.cityDiv {
+  position: relative;
+}
+.input {
+  &Search {
+    min-width: 335px;
+    min-height: 48px;
+    margin-bottom: 12px;
+    background-color: getColor("bg-secondary");
+    padding-left: 42px;
+    border-style: none;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: getColor("text-third");
+
+    &::placeholder {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 22px;
+      color: getColor("text-third");
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid getColor("text-third");
+      transition: border-color 10000ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+.svgZoom {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 17%;
+  left: 12px;
+  fill: getColor("text-third");
+}
