@@ -1,0 +1,45 @@
+@import "../../../shared/styles/common.scss";
+.item {
+  border: 1px solid #d1d1d1;
+  padding: 10px;
+  margin-bottom: 40px;
+  @include desktop {
+    width: 397px !important;
+    margin-bottom: 76px;
+  }
+}
+.img {
+  width: 312px;
+  height: 168px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  margin-bottom: 30px;
+  @include desktop {
+    width: 373px;
+    height: 201px;
+  }
+}
+.heading {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: getColor("text-accent");
+  @include desktop {
+    max-width: 350px;
+    margin: 0px 0px 15px 0px;
+  }
+}
+.paragraph {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+  @include desktop {
+    max-width: 350px;
+    margin: 0px;
+  }
+}

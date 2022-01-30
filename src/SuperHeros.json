@@ -1,0 +1,60 @@
+[
+  {
+    "nickname": "Batman",
+    "real_name": "Bruce Wayne",
+    "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+    "superpowers": "money",
+    "catch_phrase": "Detective Comics #27",
+    "images": ["https://images3.alphacoders.com/827/thumbbig-82729.webp", "https://images5.alphacoders.com/337/thumbbig-337952.webp", "https://images8.alphacoders.com/463/thumbbig-463477.webp"]
+  },
+  {
+    "nickname": "Superman",
+    "real_name": "Kal-El",
+    "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+    "catch_phrase": "Action Comics #1",
+    "images": [ "https://images2.alphacoders.com/617/thumbbig-617946.webp", "https://images4.alphacoders.com/290/thumbbig-290378.webp", "https://images3.alphacoders.com/819/thumbbig-819350.webp"]
+  },
+  {
+    "nickname": "Flash",
+    "real_name": "Jay Garrick",
+    "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+    "catch_phrase": "Flash Comics #1",
+    "images": ["https://images8.alphacoders.com/438/thumbbig-438953.webp","https://images2.alphacoders.com/707/thumbbig-707960.webp"]
+  },
+  {
+    "nickname": "Green Lantern",
+    "real_name": "Alan Scott",
+    "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+    "catch_phrase": "All-American Comics #16",
+    "images": ["https://images.alphacoders.com/876/thumbbig-87661.webp","https://images2.alphacoders.com/584/thumbbig-584034.webp"]
+  },
+  {
+    "nickname": "Green Arrow",
+    "real_name": "Oliver Queen",
+    "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+    "catch_phrase": "More Fun Comics #73",
+    "images": ["https://images2.alphacoders.com/935/thumbbig-935050.webp","https://images6.alphacoders.com/800/thumbbig-800516.webp"]
+  },
+ {
+  "nickname": "Wonder Woman",
+  "real_name": "Princess Diana",
+  "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+  "catch_phrase": "All Star Comics #8",
+  "images": ["https://images7.alphacoders.com/760/thumbbig-760447.webp","https://images6.alphacoders.com/721/thumbbig-721151.webp"]
+},
+{
+  "nickname": "Martian Manhunter",
+  "real_name": "J'onn J'onzz",
+  "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+  "catch_phrase": "Detective Comics #225",
+  "images": ["https://images3.alphacoders.com/608/thumbbig-608446.webp","https://images5.alphacoders.com/471/thumbbig-471123.webp"]
+},
+{
+  "nickname": "Robin/Nightwing",
+  "real_name": "Dick Grayson",
+  "origin_description": "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction",
+  "catch_phrase": "Detective Comics #38",
+  "images": ["https://images2.alphacoders.com/110/thumbbig-1104536.webp","https://images8.alphacoders.com/390/thumbbig-390564.webp"]
+}
+]
+

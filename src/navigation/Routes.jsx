@@ -11,7 +11,7 @@ const Path = () => {
       <Routes>
         <Route path="/" element={<HomePage title="main page" />} exact />
         <Route
-          path="/super-heros"
+          path="/super-heros/:nickname"
           element={<SuperHerosPage title="Super heros page" />}
           exact
         />

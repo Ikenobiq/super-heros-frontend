@@ -1,4 +1,45 @@
-// @import "../../shared/styles/common.scss";
-// .footer {
+@import "../../shared/styles/common.scss";
+.svgDiv {
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px;
+  position: relative;
+  &::after {
+    // content: "";
+    // position: absolute;
+    // height: 1px;
+    // background-color: getColor("text-third");
+  }
+}
+.svgList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-// }
+.svg {
+  fill: getColor("text-third");
+  width: 25px;
+  height: 25px;
+  margin-right: 16px;
+  --color1: getColor("text-third");
+  --color2: #032332;
+  &:hover,
+  :focus {
+    border-radius: 5px;
+    fill: getColor("bg-secondary");
+    background-color: getColor("text-third");
+    --color2: #82d4cb;
+  }
+}
+.footerBy {
+  color: getColor("text-third");
+  padding: 20px;
+  text-align: center;
+  &svg {
+    width: 14px;
+    height: 14px;
+    fill: getColor("text-third");
+  }
+}

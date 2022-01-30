@@ -1,0 +1,37 @@
+@import "../../../shared/styles/common.scss";
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  transition: 500ms;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 4px 10px getColor("text-third");
+    transition: 500ms;
+    transform: scale(1.2);
+  }
+}
+.headingImg {
+  transition: width 500ms;
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.nickname {
+  font-size: 18px;
+  line-height: 16px;
+  color: getColor("text-third");
+  padding: 10px;
+}

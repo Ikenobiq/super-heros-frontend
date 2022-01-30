@@ -6,10 +6,7 @@ const SearchMainSection = ({ variant }) => {
   return (
     <div className={styles.mainDiv}>
       <div className={styles.searchDiv}>
-        <TextField
-          className={styles.inputSearch}
-          placeholder={"Enter character name"}
-        />
+        <TextField placeholder={"Enter character name"} />
         <svg className={styles.svgZoom}>
           <use className={styles.zoom} href={`${svg}#zoom`}></use>
         </svg>
