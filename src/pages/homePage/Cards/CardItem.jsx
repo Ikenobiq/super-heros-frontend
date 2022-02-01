@@ -1,6 +1,6 @@
 import styles from "./Cards.module.scss";
-const CardItem = ({ SuperHero }) => {
-  const { nickname, images } = SuperHero;
+const CardItem = ({ superHero }) => {
+  const { nickname, images } = superHero;
   return (
     <li className={styles.item}>
       <img className={styles.headingImg} src={images[0]} alt="hero img" />

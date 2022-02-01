@@ -1,6 +1,6 @@
 import SimpleSlider from "./Slider";
 import styles from "./SelectedHero.module.scss";
-const SelectedHero = ({ SuperHeros }) => {
+const SelectedHero = ({ superHeros }) => {
   const {
     nickname,
     real_name,
@@ -8,7 +8,7 @@ const SelectedHero = ({ SuperHeros }) => {
     superpowers,
     catch_phrase,
     images,
-  } = SuperHeros;
+  } = superHeros;
   return (
     <main>
       <div>

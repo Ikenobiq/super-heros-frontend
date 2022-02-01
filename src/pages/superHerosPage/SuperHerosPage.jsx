@@ -1,13 +1,12 @@
 import Footer from "../../client/Footer/Footer";
 import Header from "../../client/Header";
-import SelectedHero from "../superHerosPage/SelectedHero/SelectedHero";
-import SuperHeros from "../../SuperHeros.json";
+// import SelectedHero from "../superHerosPage/SelectedHero/SelectedHero";
 
 const SuperHerosPage = () => {
   return (
     <>
       <Header />
-      <SelectedHero SuperHeros={SuperHeros} />
+      {/* <SelectedHero /> */}
       <Footer />
     </>
   );

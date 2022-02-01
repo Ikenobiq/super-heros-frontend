@@ -1,12 +1,20 @@
 import CardItem from "./CardItem";
 import styles from "./Cards.module.scss";
-const Card = ({ SuperHeros }) => {
-  console.log(SuperHeros);
+import { fetchAllSuperheroes } from "../../../fetch/fetch";
+import { useEffect, useState } from "react";
+
+const Card = () => {
+  const [allSuperheroes, setAllSuperheroes] = useState([]);
+  useEffect(() => {
+    fetchAllSuperheroes().then((resp) => {
+      setAllSuperheroes(resp.data.result);
+    });
+  }, []);
   return (
     <div className="container">
       <ul className={styles.list}>
-        {SuperHeros.map((SuperHero) => (
-          <CardItem SuperHero={SuperHero} />
+        {allSuperheroes.map((superHero) => (
+          <CardItem key={superHero._id} superHero={superHero} />
         ))}
       </ul>
     </div>
