@@ -1,0 +1,30 @@
+@import "../../../shared/styles/common.scss";
+.editeMain {
+  background-image: url(../../../shared/images/tor.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.list {
+  padding-top: 15px;
+}
+.item {
+  margin-bottom: 15px;
+}
+.DivLogo {
+  margin-right: 80px;
+  &Img {
+    width: 150px;
+    padding: 15px 0px;
+    &:hover,
+    :focus {
+      transform: scale(1.2);
+    }
+  }
+}
+.cancelBtn {
+  margin-left: 100px;
+  background-color: getColor("bg-primary");
+  color: rgba(255, 0, 0, 0.741);
+}

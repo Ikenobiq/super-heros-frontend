@@ -7,22 +7,22 @@ const Footer = () => {
       <div className={styles.FooterSocialDiv}>
         <div className={styles.svgDiv}>
           <ul className={styles.svgList}>
-            <li>
+            <li className={styles.svgItem}>
               <svg className={styles.svg}>
                 <use href={`${svg}#twitter`}></use>
               </svg>
             </li>
-            <li>
+            <li className={styles.svgItem}>
               <svg className={styles.svg}>
                 <use href={`${svg}#facebook`}></use>
               </svg>
             </li>
-            <li>
+            <li className={styles.svgItem}>
               <svg className={styles.svg}>
                 <use href={`${svg}#instagram`}></use>
               </svg>
             </li>
-            <li>
+            <li className={styles.svgItem}>
               <svg className={styles.svg}>
                 <use className={styles.use} href={`${svg}#youtube`}></use>
               </svg>

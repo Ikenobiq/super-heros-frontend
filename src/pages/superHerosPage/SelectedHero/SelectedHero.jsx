@@ -5,11 +5,11 @@ import Button from "../../../shared/components/Button";
 import { getSuperheroesById, removeSuperHero } from "../../../fetch/fetch";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SelectedHero = () => {
   const params = useParams();
-
+  const navigate = useNavigate();
   const [superHero, setSuperHero] = useState(null);
   useEffect(() => {
     const getHero = async () => {
@@ -47,35 +47,48 @@ const SelectedHero = () => {
   } = superHero.result;
 
   return (
-    <main>
-      <div>
-        <SimpleSlider images={images} />
+    <main className="container">
+      <div className={styles.SelectedHero}>
+        <div>
+          <SimpleSlider images={images} />
+        </div>
+        <div className={styles.ListWrap}>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <h3 className={styles.nickname}>{nickname}</h3>
+            </li>
+            <li className={styles.item}>
+              <h3 className={styles.heading}>Real name:</h3>
+              <p className={styles.paragraph}> {real_name}</p>
+            </li>
+            <li className={styles.item}>
+              <h3 className={styles.heading}>Origin:</h3>
+              <p className={styles.paragraph}> {origin_description}</p>
+            </li>
+            <li className={styles.item}>
+              <h3 className={styles.heading}>Superpowers: </h3>
+              <p className={styles.paragraph}>{superpowers}</p>
+            </li>
+            <li className={styles.item}>
+              <h3 className={styles.heading}>Catch phrase:</h3>
+              <p className={styles.paragraph}>{catch_phrase}</p>
+            </li>
+          </ul>
+          <div className={styles.buttonWrap}>
+            <Link to={`/super-heros/${_id}/edite`} superHero={superHero.result}>
+              <Button className={styles.button} text={"Edite"} />
+            </Link>
+            <Link to={`/`}>
+              <Button
+                className={styles.button}
+                text={"Delete"}
+                onClick={deleteHero}
+                type="button"
+              />
+            </Link>
+          </div>
+        </div>
       </div>
-      <ul>
-        <li>
-          <p className={styles.paragraph}>{nickname}</p>
-        </li>
-        <li>
-          <p className={styles.paragraph}>{real_name}</p>
-        </li>
-        <li>
-          <p>
-            <p className={styles.paragraph}>{origin_description}</p>
-          </p>
-        </li>
-        <li>
-          <p className={styles.paragraph}>{superpowers}</p>
-        </li>
-        <li>
-          <p className={styles.paragraph}>{catch_phrase}</p>
-        </li>
-      </ul>
-      <Link to={`/super-heros/${_id}/edite`}>
-        <Button text={"Edite"} superHero={superHero.result} />
-      </Link>
-      <Link to={`/`}>
-        <Button text={"Delete"} onClick={deleteHero} type="button" />
-      </Link>
     </main>
   );
 };

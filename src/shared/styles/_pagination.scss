@@ -1,10 +1,6 @@
 .pagination-container {
   display: flex;
-  list-style-type: none;
-  @include desktop {
-    width: 838px;
-    justify-content: center;
-  }
+  justify-content: center;
 
   .pagination-item {
     height: 21px;
@@ -22,22 +18,22 @@
     font-size: 16px;
     line-height: 20px;
 
-    color: #adadad;
+    color: #82d4cb;
 
     &.dots:hover {
       background-color: transparent;
       cursor: default;
-      color: #000046;
+      color: #032332;
     }
     &:hover {
-      background-color: #000046;
-      color: #ffffff;
+      background-color: #82d4cb;
+      color: #032332;
       cursor: pointer;
     }
 
     &.selected {
-      background-color: #000046;
-      color: #ffffff;
+      background-color: #82d4cb;
+      color: #032332;
     }
 
     .arrow {

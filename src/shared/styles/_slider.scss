@@ -4,6 +4,7 @@
   }
   &list {
     overflow: hidden;
+    margin-bottom: 20px;
   }
   &dots {
     display: flex !important;
@@ -16,8 +17,8 @@
     list-style: none;
     margin-right: 10px;
     border-radius: 50%;
-    border-color: getColor("text-accent");
-    background-color: getColor("text-secondary");
+    border-color: getColor("bg-secondary");
+    background-color: getColor("text-third");
   }
   &dots button {
     cursor: pointer;
@@ -31,6 +32,12 @@
     background-color: inherit;
   }
   &dots li.slick-active {
-    background-color: getColor("text-accent");
+    background-color: getColor("bg-secondary");
   }
+  &slide {
+  }
+}
+.slick-slider {
+  width: 550px;
+  margin-right: 50px;
 }

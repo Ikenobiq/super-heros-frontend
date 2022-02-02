@@ -4,11 +4,11 @@ import SelectedHero from "../superHerosPage/SelectedHero/SelectedHero";
 
 const SuperHerosPage = () => {
   return (
-    <>
+    <div className="SuperHerosPage">
       <Header />
       <SelectedHero />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,13 +1,9 @@
 import CardItem from "./CardItem";
 import styles from "./Cards.module.scss";
-import {
-  createSuperhero,
-  getSuperheroes,
-  updateSuperhero,
-} from "../../../fetch/fetch";
+
 import { useEffect, useState } from "react";
 import Pagination from "../../../client/Paginator/Pagination";
-import SelectedHero from "../../superHerosPage/SelectedHero/SelectedHero";
+import { getSuperheroes } from "../../../fetch/fetch";
 
 const PAGE_SIZE = 5;
 
@@ -50,18 +46,6 @@ const Card = ({ superheroNickname }) => {
   const byNickname = (superhero) =>
     superhero.nickname.toLowerCase().includes(superheroNickname);
 
-  const handleSuperheroCreated = () => {
-    // перенести
-    const superheroToCreate = { ...superhero };
-    delete superheroToCreate._id;
-    createSuperhero(superheroToCreate).then(fetchSuperheroes);
-  };
-
-  const handleSuperheroUpdated = () => {
-    // перенести
-    updateSuperhero(superhero).then(fetchSuperheroes);
-  };
-
   return (
     <div className="container">
       <ul className={styles.list}>
@@ -75,13 +59,6 @@ const Card = ({ superheroNickname }) => {
         totalCount={totalCount}
         pageSize={PAGE_SIZE}
       />
-      {/* {superhero && (
-        <SelectedHero
-          superhero={superhero}
-          onSuperheroChange={handleSuperheroChange}
-          onSubmitButtonClick={handleSuperheroCreated}
-        />
-      )} */}
     </div>
   );
 };

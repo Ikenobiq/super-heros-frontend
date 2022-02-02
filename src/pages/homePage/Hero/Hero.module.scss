@@ -1,7 +1,7 @@
 @import "../../../shared/styles/common.scss";
 .heroBack {
   width: 100%;
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 .paragraph {
   font-weight: 500;
@@ -21,7 +21,6 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 50px;
 }
 .title {
   font-size: 64px;

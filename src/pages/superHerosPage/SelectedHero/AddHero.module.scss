@@ -1,0 +1,29 @@
+@import "../../../shared/styles/common.scss";
+.addMain {
+  background-image: url(../../../shared/images/edite.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.DivLogo {
+  margin-right: 80px;
+  &Img {
+    width: 150px;
+    padding: 15px 0px;
+    &:hover,
+    :focus {
+      transform: scale(1.2);
+    }
+  }
+}
+.list {
+  padding-top: 15px;
+}
+.item {
+  margin-bottom: 15px;
+}
+.cancelBtn {
+  margin-left: 100px;
+  background-color: getColor("bg-primary");
+  color: rgba(255, 0, 0, 0.741);
+}

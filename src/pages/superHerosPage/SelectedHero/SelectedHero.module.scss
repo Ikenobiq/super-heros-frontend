@@ -1,0 +1,47 @@
+@import "../../../shared/styles/common.scss";
+.SelectedHero {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.paragraph {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+  color: getColor("text-third");
+  padding: 10px;
+}
+.nickname {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  color: getColor("text-third");
+  padding: 10px;
+}
+.heading {
+  font-size: 16px;
+  line-height: 18px;
+  color: getColor("text-third");
+  padding: 10px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+}
+.ListWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.buttonWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  margin-left: 30px;
+}
