@@ -7,15 +7,14 @@ import styles from "./EditeHero.module.scss";
 import logo from "../../../shared/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 const EditeHero = () => {
+  const [superhero, setSuperhero] = useState(null);
   const params = useParams();
   const navigate = useNavigate();
-  const [superhero, setSuperhero] = useState(null);
 
   useEffect(() => {
     const getHero = async () => {
       try {
         const { data } = await getSuperheroesById(params.id);
-        console.log(data);
         setSuperhero(data.result);
       } catch (error) {
         console.log(error.message);
@@ -24,7 +23,6 @@ const EditeHero = () => {
     getHero();
   }, [params]);
   if (superhero === null) return null;
-  console.log(superhero);
 
   const { nickname, real_name, origin_description, superpowers, catch_phrase } =
     superhero;

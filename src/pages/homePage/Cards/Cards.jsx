@@ -7,49 +7,24 @@ import { getSuperheroes } from "../../../fetch/fetch";
 
 const PAGE_SIZE = 5;
 
-const Card = ({ superheroNickname }) => {
+const Card = () => {
   const [allSuperheroes, setAllSuperheroes] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotalCount] = useState(PAGE_SIZE);
 
-  // Trash start
-
-  const [superhero, setSuperhero] = useState();
-  const handleSuperheroChange = (key, newValue) => {
-    setSuperhero((prev) => {
-      const newSuperhero = { ...prev };
-      newSuperhero[key] = newValue;
-      return newSuperhero;
-    });
-  };
-  // Trash end
-
-  const fetchSuperheroes = async () => {
-    const fetchedSuperheroes = await getSuperheroes(currentPage, PAGE_SIZE);
-    const { data } = fetchedSuperheroes;
-    setAllSuperheroes(data.result);
-    setTotalCount(data.totalCount);
-  };
-
   useEffect(() => {
-    fetchSuperheroes();
-    // Remove start
     getSuperheroes(currentPage, PAGE_SIZE).then((resp) => {
       setAllSuperheroes(resp.data.result);
       setTotalCount(resp.data.totalCount);
-      setSuperhero(resp.data.result[0]); // Important: remove
-    }); // Remove end
+    });
   }, [currentPage]);
 
   const onPageChanged = (newPage) => setCurrentPage(newPage);
 
-  const byNickname = (superhero) =>
-    superhero.nickname.toLowerCase().includes(superheroNickname);
-
   return (
     <div className="container">
       <ul className={styles.list}>
-        {allSuperheroes.filter(byNickname).map((superHero) => (
+        {allSuperheroes.map((superHero) => (
           <CardItem key={superHero._id} superHero={superHero} />
         ))}
       </ul>

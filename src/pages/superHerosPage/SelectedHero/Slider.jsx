@@ -17,7 +17,7 @@ const SimpleSlider = ({ images }) => {
   return (
     <Slider {...settings}>
       {images.map((image) => (
-        <li className={styles.sliderList}>
+        <li key={images} className={styles.sliderList}>
           <img className={styles.sliderIMG} src={image} alt="hero" />
         </li>
       ))}

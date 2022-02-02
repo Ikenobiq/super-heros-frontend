@@ -1,7 +1,6 @@
 import styles from "./Cards.module.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 const CardItem = ({ superHero }) => {
-  const location = useLocation();
   const { nickname, images, _id } = superHero;
   return (
     <li className={styles.item}>

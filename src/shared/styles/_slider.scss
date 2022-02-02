@@ -17,8 +17,8 @@
     list-style: none;
     margin-right: 10px;
     border-radius: 50%;
-    border-color: getColor("bg-secondary");
-    background-color: getColor("text-third");
+    border-color: getColor("text-third");
+    background-color: getColor("bg-secondary");
   }
   &dots button {
     cursor: pointer;
@@ -32,7 +32,7 @@
     background-color: inherit;
   }
   &dots li.slick-active {
-    background-color: getColor("bg-secondary");
+    background-color: getColor("text-third");
   }
   &slide {
   }

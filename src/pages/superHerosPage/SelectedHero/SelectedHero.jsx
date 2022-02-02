@@ -1,21 +1,20 @@
 import SimpleSlider from "./Slider";
 import styles from "./SelectedHero.module.scss";
-import TextField from "../../../shared/components/TextField";
 import Button from "../../../shared/components/Button";
 import { getSuperheroesById, removeSuperHero } from "../../../fetch/fetch";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SelectedHero = () => {
-  const params = useParams();
-  const navigate = useNavigate();
   const [superHero, setSuperHero] = useState(null);
+
+  const params = useParams();
+
   useEffect(() => {
     const getHero = async () => {
       try {
         const { data } = await getSuperheroesById(params.id);
-        console.log(data);
         setSuperHero(data);
       } catch (error) {
         console.log(error.message);
@@ -23,7 +22,6 @@ const SelectedHero = () => {
     };
     getHero();
   }, [params]);
-
   if (superHero === null) return null;
 
   const deleteHero = async () => {
@@ -35,7 +33,6 @@ const SelectedHero = () => {
     }
   };
 
-  console.log(superHero);
   const {
     _id,
     nickname,
@@ -75,7 +72,7 @@ const SelectedHero = () => {
             </li>
           </ul>
           <div className={styles.buttonWrap}>
-            <Link to={`/super-heros/${_id}/edite`} superHero={superHero.result}>
+            <Link to={`/super-heros/${_id}/edite`}>
               <Button className={styles.button} text={"Edite"} />
             </Link>
             <Link to={`/`}>
@@ -93,17 +90,3 @@ const SelectedHero = () => {
   );
 };
 export default SelectedHero;
-
-// <TextField
-//             value={nickname}
-// onChange={(e) =>
-//   onSuperheroChange("nickname", e.currentTarget.value)
-// }
-// />
-
-//     <TextField
-//     value={real_name}
-//     onChange={(e) =>
-//       onSuperheroChange("real_name", e.currentTarget.value)
-//     }
-//   />

@@ -14,7 +14,9 @@ const AddHero = () => {
     superpowers: "",
     catch_phrase: "",
   });
+
   const navigate = useNavigate();
+
   const hendleChange = (event, key) => {
     const newHero = { ...superhero };
     newHero[key] = event.target.value;
