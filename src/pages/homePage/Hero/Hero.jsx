@@ -3,7 +3,7 @@ const Hero = () => (
   <div className={styles.heroBack}>
     <div className="container">
       <h1 className={styles.title}>Choose your favorite Super Hero </h1>
-      <p className={styles.paragraph}>or create something new</p>
+      <p className={styles.paragraph}>or add a new</p>
     </div>
   </div>
 );

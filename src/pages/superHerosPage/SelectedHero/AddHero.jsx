@@ -67,11 +67,12 @@ const AddHero = () => {
               onChange={(event) => hendleChange(event, "catch_phrase")}
             />
           </li>
-          <li>
-            <form action="">
-              <input type="file" />
+          {/* <li>
+            <form id="form" action="" encType="multipart/form-data">
+              <input name="file" type="file" multiple />
+              <Button text="Add Image" type="submit" />
             </form>
-          </li>
+          </li> */}
         </ul>
         <Link to={`/`}>
           <Button

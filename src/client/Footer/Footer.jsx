@@ -36,7 +36,6 @@ const Footer = () => {
               <use className={styles.use} href={`${svg}#heart`}></use>
             </svg>
           </span>{" "}
-          by Andrii Ivanichenko
         </p>
       </div>
     </footer>

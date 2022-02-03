@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+  margin-bottom: 30px;
 }
 .item {
   display: flex;
@@ -13,8 +14,7 @@
   justify-content: center;
   align-items: center;
   width: 300px;
-  margin-right: 50px;
-  margin-bottom: 50px;
+  margin: 0px 25px 40px 25px;
   transition: 500ms;
   border-radius: 5px;
   cursor: pointer;
